@@ -1,0 +1,138 @@
+---
+title: "Real data parameters"
+author: "Davide Risso"
+date: "3/26/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Dataset 1
+
+The first dataset is available at github.com/drisso/fletcher2017data.
+
+We load the data.
+
+```{r data1}
+library(fletcher2017data)
+library(SingleCellExperiment)
+
+data("fletcher")
+fletcher
+```
+
+We only care about transcription factor (TF) genes. We can retrieve a list from github.
+
+```{r tf}
+tf <- read.table("https://raw.githubusercontent.com/rufletch/p63-HBC-diff/master/ref/ATFDB_mm_TF.txt", stringsAsFactors = FALSE)
+
+genes <- intersect(rownames(fletcher), tf[,1])
+length(genes)
+
+datamat <- counts(fletcher)[genes,]
+```
+
+## ZINB
+
+```{r}
+library(zinbwave)
+fit <- zinbFit(datamat)
+
+## Mu
+mu <- colMeans(getMu(fit))
+summary(mu)
+hist(mu, breaks=30)
+which.max(mu)
+summary(datamat[759,])
+
+## Pi
+pi <- colMeans(getPi(fit))
+summary(pi)
+hist(pi, breaks=30)
+
+## Theta
+theta <- getTheta(fit)
+unique(theta)
+```
+
+## NB
+
+```{r}
+fitnb <- zinbFit(datamat, zeroinflation = FALSE)
+
+## Mu
+mu <- colMeans(getMu(fitnb))
+summary(mu)
+hist(mu, breaks=30)
+which.max(mu)
+summary(datamat[759,])
+
+## Theta
+theta <- getTheta(fitnb)
+unique(theta)
+```
+
+# Dataset 2
+
+The second dataset is available in Dropbox.
+
+We load the data.
+
+```{r data2}
+data2 <- read.table("~/Dropbox (unipd)/zinb_graph/data/oe_data_10x_neuronal.txt")
+data2 <- t(data2)
+```
+
+We only care about transcription factor (TF) genes. We can retrieve a list from github.
+
+```{r tf2}
+length(intersect(rownames(data2), tf[,1]))
+
+## random subset of 800 cells
+set.seed(124)
+idx <- sample(colnames(data2), 800)
+data2 <- data2[,idx]
+
+geneidx <- which(matrixStats::rowVars(data2)>0)
+data2 <- data2[geneidx,]
+```
+
+## ZINB
+
+```{r}
+fit2 <- zinbFit(data2)
+
+## Mu
+mu <- colMeans(getMu(fit2))
+summary(mu)
+hist(mu, breaks=30)
+which.min(mu)
+summary(data2[419,])
+
+## Pi
+pi <- colMeans(getPi(fit2))
+summary(pi)
+hist(pi, breaks=30)
+
+## Theta
+theta <- getTheta(fit2)
+unique(theta)
+```
+
+## NB
+
+```{r}
+fitnb2 <- zinbFit(data2, zeroinflation = FALSE)
+
+## Mu
+mu <- colMeans(getMu(fitnb2))
+summary(mu)
+hist(mu, breaks=30)
+
+## Theta
+theta <- getTheta(fitnb2)
+unique(theta)
+```
+
