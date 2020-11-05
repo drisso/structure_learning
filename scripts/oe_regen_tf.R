@@ -3,6 +3,7 @@ library(foreach)
 library(doParallel)
 cl <- makeCluster(20)
 registerDoParallel(cl)
+source("KS_test.R")
 
 ###### load count matrix
 data <- readRDS("data/counts.rds")
@@ -82,7 +83,7 @@ for (k  in 1: length(name.groupcond)) {
 
 source("optimzinb.R")
 source("PCzinb1noT.R")
-source("KS_test.R")
+
 for (k in 1:5) {
     name.file <- paste(k,"dataTFtranscelsalpha0595.RData", sep = "-")
     load(name.file)
