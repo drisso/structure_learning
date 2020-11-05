@@ -82,6 +82,7 @@ for (k  in 1: length(name.groupcond)) {
 
 source("optimzinb.R")
 source("PCzinb1noT.R")
+source("KS_test.R")
 for (k in 1:5) {
     name.file <- paste(k,"dataTFtranscelsalpha0595.RData", sep = "-")
     load(name.file)
@@ -90,10 +91,10 @@ for (k in 1:5) {
     datatest <- as.matrix(datatest,n,p)
 
     maxcard <- 3
-    alpha <-  2*pnorm(n^.2,lower.tail=F)
+    alpha <-  2*pnorm(n^.15,lower.tail=F)
     #####zinb1
     zinbPC1.time <- system.time(adj.zinb1 <- zinb1.noT(datatest,maxcard,alpha, extend=TRUE))
-    name.fileresult <- paste(k,"dataTFtranscelsalpha05952result.RData", sep = "-")
+    name.fileresult <- paste(k,"dataTFtranscelsalpha059515result.RData", sep = "-")
     save(adj.zinb1,datatest, file = name.fileresult )
 }
 
