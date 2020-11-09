@@ -1,5 +1,5 @@
 # structure_learning
-Code to reproduce the analyses of Hue Nguyen et al. (2020)
+Code to reproduce the analyses of Nguyen et al. (2020)
 
 To reproduce simulation results, run examples.R
 
