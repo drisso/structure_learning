@@ -1,9 +1,9 @@
-library("countreg")
+library(countreg)
 library(foreach)
 library(doParallel)
 cl <- makeCluster(20)
 registerDoParallel(cl)
-source("KS_test.R")
+source("scripts/KS_test.R")
 
 ###### load count matrix
 data <- readRDS("data/counts.rds")
@@ -13,7 +13,7 @@ groups <- readRDS("data/groups.rds")
 name.group <- as.character(unique(groups))
 
 ### load TF genes
-load(file  ="data/ALL_TF.rda")
+load(file="data/ALL_TF.rda")
 TF.gene <- ALL_TF
 ###################
 ##### consider neuronal lineage
@@ -80,9 +80,7 @@ for (k  in 1: length(name.groupcond)) {
 }
 
 ###################  Estimating gene networks by zinb1
-
-source("optimzinb.R")
-source("PCzinb1noT.R")
+library(zinbgraph)
 
 for (k in 1:5) {
     name.file <- paste(k,"dataTFtranscelsalpha0595.RData", sep = "-")
@@ -98,6 +96,3 @@ for (k in 1:5) {
     name.fileresult <- paste(k,"dataTFtranscelsalpha059515result.RData", sep = "-")
     save(adj.zinb1,datatest, file = name.fileresult )
 }
-
-
-
