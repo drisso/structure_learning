@@ -1,32 +1,14 @@
-rm (list=ls())
-library("countreg")
+library(countreg)
 library(HurdleNormal)
 library(zinbgraph)
 library(BiocParallel)
 library(foreach)
-# library(doParallel)
-# cl <- makeCluster(7)
-# registerDoParallel(cl)
-# MC_CORES  <- 7
-# options(mc.cores=MC_CORES)
 
-# #setwd("/Users/KimHue/study/zinb/R/zinb_code")
-# source("datasimPois.R")
-# source("datasimNB.R")
-# source("datasimzinb.R")
-# source("optimzinb.R")
-# source("optimnb.R")
-# source("PCnb_optim.R")
-# source("PCnbinom.R")
-# source("PCPoisson.R")
-# source("PCzinb1noT.R")
-# source("PCzinb0noT.R")
-
-source("analysis/result_scores.R")
-source("analysis/run_algorithm.R")
+source("scripts/result_scores.R")
+source("scripts/run_algorithm.R")
 
 #######load Adj matrix
-load("analysis/randomsample10-03.RData")
+load("data/randomsample10-03.RData")
 
 ##########
 n <- 1000
