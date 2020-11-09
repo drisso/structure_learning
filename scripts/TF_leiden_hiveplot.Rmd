@@ -17,14 +17,12 @@ output: html_document
 
 HBC* - GBC - iOSN - mOSN
 ```{r}
-setwd("/Users/KimHue/study/zinb/R/zinb_coderealdata/result_realdata")
-rm(list = ls())
 library(HiveR)
 library(leiden)
 library(plyr)
 library(grid)
-adj_matrices <- readRDS("adjMatrices_2core.rds")
-hub_nodes <- readRDS("hub_nodes.rds")
+adj_matrices <- readRDS("data/adjMatrices_2core.rds")
+hub_nodes <- readRDS("data/hub_nodes.rds")
 cols <- c("#E41A1C", "#377EB8", "#4DAF4A", "#984EA3", "#FF7F00", "#FFFF33", "#A65628", "#F781BF", "#999999")
 
 ```

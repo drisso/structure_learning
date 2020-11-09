@@ -33,7 +33,7 @@ HBC* - GBC - iOSN - mOSN
 
 ```{r}
 ## activated HBC
-load("3-dataTFtranscelsalpha059515result.RData")
+load("data/3-dataTFtranscelsalpha059515result.RData")
 adjHBCAct <- adj.zinb1
 dimnames(adjHBCAct) <- list(colnames(datatest), colnames(datatest))
 adjHBCAct <- adjHBCAct[!rowSums(adjHBCAct) == 0,]
@@ -43,7 +43,7 @@ rm(adj.zinb1, datatest)
 
 
 ## GBC
-load("4-dataTFtranscelsalpha059515result.RData")
+load("data/4-dataTFtranscelsalpha059515result.RData")
 adjGBC <- adj.zinb1
 dimnames(adjGBC) <- list(colnames(datatest), colnames(datatest))
 adjGBC <- adjGBC[!rowSums(adjGBC) == 0,]
@@ -53,7 +53,7 @@ rm(adj.zinb1, datatest)
 
 
 ## iOSN
-load("2-dataTFtranscelsalpha059515result.RData")
+load("data/2-dataTFtranscelsalpha059515result.RData")
 adjiOSN <- adj.zinb1
 dimnames(adjiOSN) <- list(colnames(datatest), colnames(datatest))
 adjiOSN <- adjiOSN[!rowSums(adjiOSN) == 0,]
@@ -63,7 +63,7 @@ rm(adj.zinb1, datatest)
 
 
 ## mOSN
-load("5-dataTFtranscelsalpha059515result.RData")
+load("data/5-dataTFtranscelsalpha059515result.RData")
 adjmOSN <- adj.zinb1
 dimnames(adjmOSN) <- list(colnames(datatest), colnames(datatest))
 adjmOSN <- adjmOSN[!rowSums(adjmOSN) == 0,]
