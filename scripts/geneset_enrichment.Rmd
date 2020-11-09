@@ -23,13 +23,6 @@ library(msigdbr)
 library(fgsea)
 library(knitr)
 library(leiden)
-sds <- readRDS("sling.rds")
-clDatta <- readRDS("dattaCl_noResp_noMV.rds")
-cols <- c("#E41A1C", "#377EB8", "#4DAF4A", "#984EA3", "#FF7F00", "#FFFF33", "#A65628", "#F781BF", "#999999")
-view3d( theta = 10, phi = 10)
-# Datta labels
-plot3d(reducedDim(sds), aspect = 'iso', col=cols[clDatta], alpha=.6, xlab="UMAP1", ylab="UMAP2", zlab="UMAP3", box=FALSE, top=TRUE)
-load("list_TF.RData")
 ```
 
 # Transcription factor networks
