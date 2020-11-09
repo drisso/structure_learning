@@ -1,0 +1,204 @@
+---
+title: "TF_leiden"
+author: "Kim Hue"
+date: "10/22/2020"
+output: html_document
+---
+
+---
+title: "TF_comunity" 
+author: "Kim Hue"
+date: "9/29/2020"
+output: html_document
+---
+
+# Transcription factor networks $\alpha=2\times\text{pnorm}(n^{0.15},\text{lower.tail=F})$
+## Neuronal lineage and Sustentacular cells
+
+HBC* - GBC - iOSN - mOSN
+```{r}
+setwd("/Users/KimHue/study/zinb/R/zinb_coderealdata/result_realdata")
+rm(list = ls())
+library(HiveR)
+library(leiden)
+library(plyr)
+library(grid)
+adj_matrices <- readRDS("adjMatrices_2core.rds")
+hub_nodes <- readRDS("hub_nodes.rds")
+cols <- c("#E41A1C", "#377EB8", "#4DAF4A", "#984EA3", "#FF7F00", "#FFFF33", "#A65628", "#F781BF", "#999999")
+
+```
+
+## Community detection
+
+
+### HBC*
+
+```{r}
+set.seed(2)
+clHBCAct <- leiden(adj_matrices$hbcAct, resolution_parameter=.4, seed = 7)
+table(clHBCAct)
+group.card <- table(clHBCAct)
+
+## hiveplot
+adj.up <- adj_matrices$hbcAct
+adj.up[lower.tri(adj.up)] <-0
+hive <- adj2HPD(adj.up, desc = "HPD from HBCact")
+n.node <- dim(adj.up)[2]
+n.edge <- dim(hive$edges)[1]
+hive$axis.cols <- cols
+hive$nodes$axis <- as.integer(clHBCAct)
+for (i in 1: n.edge) {
+  if (hive$nodes$axis[hive$edges$id1[i]] == hive$nodes$axis[hive$edges$id2[i]]){
+    hive$edges$color[i] <- hive$axis.cols[hive$nodes$axis[hive$edges$id1[i]]]
+  }else{
+    hive$edges$color[i] <- "#999999"
+  }
+ 
+}
+hive$nodes$color <- hive$axis.cols[hive$nodes$axis]
+hive$nodes$color[hive$nodes$lab %in% names(hub_nodes$hub.hbcAct)] <- "black"
+hive$nodes$radius <- seq(1,n.node,1)
+hive$edges$weight <- sqrt(hive$edges$weight) *0.5
+hive$nodes$size <- 0.01
+hive$nodes$size[hive$nodes$lab %in% names(hub_nodes$hub.hbcAct)] <- 0.5
+##names hub nodes
+hub <- unique(hive$nodes[hive$nodes$lab %in% names(hub_nodes$hub.hbcAct),c(2,3)])
+list.hub <- as.matrix(ddply(hub, .(axis), summarize, paste(lab,collapse = ", ")))
+colnames(list.hub) <- c("axis","genes")
+list.hub
+sumHPD(hive)
+hive1 <-  manipAxis(hive, method = "scale", action = c(3.8,2.9,2,1))
+plotHive(hive1,ch = 100,axLab.pos = c(300,900,400,800),bkgnd = "white", axLabs = c("Cell cycle", "Epigenetics","(Epithelial) cell differentiation","Cell cycle"),axLab.gpar = gpar(fontsize = 11,col=cols),anNode.gpar = gpar(col = "black"))
+```
+
+  
+### GBC
+  
+```{r}
+set.seed(2)
+clGBC <-  leiden(adj_matrices$GBC, resolution_parameter=.4, seed=7)
+table(clGBC)
+#### hiveplot
+adj.up <- adj_matrices$GBC
+adj.up[lower.tri(adj.up)] <-0
+hive <- adj2HPD(adj.up, desc = "HPD from GBC")
+hive$axis.cols <- cols
+hive$nodes$axis <- as.integer(clGBC)
+n.node <- dim(adj.up)[2]
+n.edge <- dim(hive$edges)[1]
+for (i in 1: n.edge) {
+  if (hive$nodes$axis[hive$edges$id1[i]] == hive$nodes$axis[hive$edges$id2[i]]){
+    hive$edges$color[i] <- hive$axis.cols[hive$nodes$axis[hive$edges$id1[i]]]
+  }else{
+    hive$edges$color[i] <- "#999999"
+  }
+  
+}
+hive$nodes$color <- hive$axis.cols[hive$nodes$axis]
+hive$nodes$color[hive$nodes$lab %in% names(hub_nodes$hub.GBC)] <- "black"
+hive$nodes$radius <- seq(1,n.node,1)
+hive$edges$weight <- sqrt(hive$edges$weight) *0.5
+hive$nodes$size <- 0.01
+hive$nodes$size[hive$nodes$lab %in% names(hub_nodes$hub.GBC)] <- 0.5
+##names hub nodes
+hub <- unique(hive$nodes[hive$nodes$lab %in% names(hub_nodes$hub.GBC),c(2,3)])
+list.hub <- as.matrix(ddply(hub, .(axis), summarize, paste(lab,collapse = ", ")))
+colnames(list.hub) <- c("axis","genes")
+list.hub
+hive1 <-  manipAxis(hive, method = "scale", action = c(3.3,3,2.3,1.5))
+plotHive(hive1,ch = 100,axLab.pos = c(300,900,400,800),bkgnd = "white", axLabs = c("P53, DNA replication", "Cell proliferation \n signaling","Expression regulation,\n stem cell differentiantion","Signaling,\n epigenetics"),axLab.gpar = gpar(fontsize = 11,col=cols),anNode.gpar = gpar(col = "black"))
+
+
+```
+
+
+
+### iOSN
+
+```{r}
+set.seed(2)
+cliOSN <- leiden(adj_matrices$iOSN, resolution_parameter=.3, seed=7)
+table(cliOSN)
+
+## hiveplot
+ind.remove <- which(cliOSN==5|cliOSN==6|cliOSN==7)
+adj.up <- adj_matrices$iOSN [-ind.remove,-ind.remove]
+adj.up[lower.tri(adj.up)] <-0
+hive <- adj2HPD(adj.up, desc = "HPD from iOSN")
+hive$axis.cols <- cols
+hive$nodes$axis <- as.integer(cliOSN[-ind.remove])
+n.node <- dim(adj.up)[2]
+n.edge <- dim(hive$edges)[1]
+for (i in 1: n.edge) {
+  if (hive$nodes$axis[hive$edges$id1[i]] == hive$nodes$axis[hive$edges$id2[i]]){
+    hive$edges$color[i] <- hive$axis.cols[hive$nodes$axis[hive$edges$id1[i]]]
+  }else{
+    hive$edges$color[i] <- "#999999"
+  }
+  
+}
+hive$nodes$color <- hive$axis.cols[hive$nodes$axis]
+hive$nodes$color[hive$nodes$lab %in% names(hub_nodes$hub.iOSN)] <- "black"
+hive$nodes$radius <- seq(1,n.node,1)
+hive$edges$weight <- sqrt(hive$edges$weight) *0.5
+hive$nodes$size <- 0.01
+hive$nodes$size[hive$nodes$lab %in% names(hub_nodes$hub.iOSN)] <- 0.5
+##names hub nodes
+hub <- unique(hive$nodes[hive$nodes$lab %in% names(hub_nodes$hub.iOSN),c(2,3)])
+list.hub <- as.matrix(ddply(hub, .(axis), summarize, paste(lab,collapse = ", ")))
+colnames(list.hub) <- c("axis","genes")
+list.hub
+chkHPD(hive) # returns FALSE if OK
+sumHPD(hive)
+
+hive1 <-  manipAxis(hive, method = "scale", action = c(2.3,1,1,0.5))
+plotHive(hive1,ch = 30,axLab.pos = c(100,300,100,500),bkgnd = "white", axLabs = c("Neurogenesis", "Cell growth \n and projection","signaling, wound healing","Stem cell maintenance,\n transcription, synthesis"),axLab.gpar = gpar(fontsize = 11,col=cols),anNode.gpar = gpar(col = "black"))
+
+```
+
+
+
+
+### mOSN
+
+```{r}
+set.seed(2)
+clmOSN <- leiden(adj_matrices$mOSN, resolution_parameter=.4, seed=7)
+table(clmOSN)
+
+## hiveplot
+adj.up <- adj_matrices$mOSN
+adj.up[lower.tri(adj.up)] <-0
+hive <- adj2HPD(adj.up, desc = "HPD from mOSN")
+#sumHPD(hive)
+hive$axis.cols <- cols
+hive$nodes$axis <- as.integer(clmOSN)
+n.node <- dim(adj.up)[2]
+n.edge <- dim(hive$edges)[1]
+for (i in 1: n.edge) {
+  if (hive$nodes$axis[hive$edges$id1[i]] == hive$nodes$axis[hive$edges$id2[i]]){
+    hive$edges$color[i] <- hive$axis.cols[hive$nodes$axis[hive$edges$id1[i]]]
+  }else{
+    hive$edges$color[i] <- "#999999"
+  }
+  
+}
+hive$nodes$color <- hive$axis.cols[hive$nodes$axis]
+hive$nodes$color[hive$nodes$lab %in% names(hub_nodes$hub.mOSN)] <- "black"
+hive$nodes$radius <- seq(1,n.node,1)
+hive$edges$weight <- sqrt(hive$edges$weight) *0.5
+hive$nodes$size <- 0.01
+hive$nodes$size[hive$nodes$lab %in% names(hub_nodes$hub.mOSN)] <- 0.5
+##names hub nodes
+hub <- unique(hive$nodes[hive$nodes$lab %in% names(hub_nodes$hub.mOSN),c(2,3)])
+list.hub <- as.matrix(ddply(hub, .(axis), summarize, paste(lab,collapse = ", ")))
+colnames(list.hub) <- c("axis","genes")
+list.hub
+sumHPD(hive)
+hive1 <-  manipAxis(hive, method = "scale", action = c(3,2,1.4,1,0.5))
+plotHive(hive1,ch = 30,axLab.pos = c(200,500,300,500,700),bkgnd = "white", axLabs = c("Chromatin organization", "Chromatin,\n transcription","TGBF-Beta \nsignaling","Viral processes", "Cell projection,\n various"),axLab.gpar = gpar(fontsize = 11,col=cols),anNode.gpar = gpar(col = "black"))
+
+
+```
+

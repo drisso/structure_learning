@@ -1,0 +1,392 @@
+---
+title: "Explore association networks"
+author: "Koen Van den Berge"
+date: "9/9/2020"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+Info:
+
+  -  index from 1 to 6 stands for groups where: 1- HBC, 2-iOSN, 3-HBC*, 4-GBC, 5-mOSN, 6-all groups
+  -  names with “dataTFtranscel” include only TF genes
+  - all results received by performing zinb1 algorithm with alpha(significance levels tests)  $\alpha=2\times\text{pnorm}(n^{0.15},\text{lower.tail=F})$
+
+```{r}
+library(igraph)
+library(rgl)
+library(rafalib)
+library(slingshot)
+library(msigdbr)
+library(fgsea)
+library(knitr)
+library(leiden)
+sds <- readRDS("sling.rds")
+clDatta <- readRDS("dattaCl_noResp_noMV.rds")
+cols <- c("#E41A1C", "#377EB8", "#4DAF4A", "#984EA3", "#FF7F00", "#FFFF33", "#A65628", "#F781BF", "#999999")
+view3d( theta = 10, phi = 10)
+# Datta labels
+plot3d(reducedDim(sds), aspect = 'iso', col=cols[clDatta], alpha=.6, xlab="UMAP1", ylab="UMAP2", zlab="UMAP3", box=FALSE, top=TRUE)
+load("list_TF.RData")
+```
+
+# Transcription factor networks
+
+## Neuronal lineage
+
+HBC* - GBC - iOSN - mOSN
+
+```{r}
+## activated HBC
+load("3-dataTFtranscelsalpha059515result.RData")
+adjHBCAct <- adj.zinb1
+dimnames(adjHBCAct) <- list(colnames(datatest), colnames(datatest))
+adjHBCAct <- adjHBCAct[!rowSums(adjHBCAct) == 0,]
+adjHBCAct <- adjHBCAct[,!colSums(adjHBCAct) == 0]
+hub.HBCact <- which(apply(adjHBCAct,2,sum)>=9)
+rm(adj.zinb1, datatest)
+
+
+## GBC
+load("4-dataTFtranscelsalpha059515result.RData")
+adjGBC <- adj.zinb1
+dimnames(adjGBC) <- list(colnames(datatest), colnames(datatest))
+adjGBC <- adjGBC[!rowSums(adjGBC) == 0,]
+adjGBC <- adjGBC[,!colSums(adjGBC) == 0]
+hub.GBC <- which(apply(adjGBC,2,sum)>=9)
+rm(adj.zinb1, datatest)
+
+
+## iOSN
+load("2-dataTFtranscelsalpha059515result.RData")
+adjiOSN <- adj.zinb1
+dimnames(adjiOSN) <- list(colnames(datatest), colnames(datatest))
+adjiOSN <- adjiOSN[!rowSums(adjiOSN) == 0,]
+adjiOSN <- adjiOSN[,!colSums(adjiOSN) == 0]
+hub.iOSN <- which(apply(adjiOSN,2,sum)>=9)
+rm(adj.zinb1, datatest)
+
+
+## mOSN
+load("5-dataTFtranscelsalpha059515result.RData")
+adjmOSN <- adj.zinb1
+dimnames(adjmOSN) <- list(colnames(datatest), colnames(datatest))
+adjmOSN <- adjmOSN[!rowSums(adjmOSN) == 0,]
+adjmOSN <- adjmOSN[,!colSums(adjmOSN) == 0]
+hub.mOSN <- which(apply(adjmOSN,2,sum)>=9)
+rm(adj.zinb1, datatest)
+
+saveRDS(list("hub.hbcAct" = hub.HBCAct, 
+             "hub.GBC" = hub.GBC, 
+             "hub.iOSN" = hub.iOSN, 
+             "hub.mOSN" = hub.mOSN), file="hub_nodes.rds")
+
+```
+
+
+
+```{r}
+degreeDf <- data.frame(degree=1:52,
+                       hbcAct=NA,
+                       gbc=NA,
+                       iOSN=NA,
+                       mOSN=NA)
+degreeHBCAct <- table(rowSums(adjHBCAct))
+degreeDf$hbcAct[match(names(degreeHBCAct), degreeDf$degree)] <- degreeHBCAct
+degreeGBC <- table(rowSums(adjGBC))
+degreeDf$gbc[match(names(degreeGBC), degreeDf$degree)] <- degreeGBC
+degreeiOSN <- table(rowSums(adjiOSN))
+degreeDf$iOSN[match(names(degreeiOSN), degreeDf$degree)] <- degreeiOSN
+degreemOSN <- table(rowSums(adjmOSN))
+degreeDf$mOSN[match(names(degreemOSN), degreeDf$degree)] <- degreemOSN
+
+
+mypar(mfrow=c(2,2))
+barplot(degreeDf$hbcAct, names=degreeDf$degree, main="HBC*: Node-level degree", ylim=c(0,400))
+barplot(degreeDf$gbc, names=degreeDf$degree, main="GBC: Node-level degree", ylim=c(0,400))
+barplot(degreeDf$iOSN, names=degreeDf$degree, main="iOSN: Node-level degree", ylim=c(0,400))
+barplot(degreeDf$mOSN, names=degreeDf$degree, main="mOSN: Node-level degree", ylim=c(0,400))
+```
+
+## Extract 2-core of the network
+
+```{r}
+extractCore <- function(A, degree = 3){
+  converg <- FALSE
+  old.nrow <- nrow(A)
+  while(!converg){
+    d <- colSums(A)
+    to.keep <- which(d>=degree)
+    if(old.nrow==length(to.keep)){
+      converg <- TRUE
+    }
+    old.nrow <- length(to.keep)
+    A <- A[to.keep,to.keep]
+  }
+  return(A)
+}
+
+adjHBCAct2 <- extractCore(adjHBCAct, degree = 2)
+adjGBC2 <- extractCore(adjGBC, degree = 2)
+adjiOSN2 <- extractCore(adjiOSN, degree = 2)
+adjmOSN2 <- extractCore(adjmOSN, degree = 2)
+
+mypar(mfrow=c(2,2))
+gHBCAct2 <- graph_from_adjacency_matrix(adjHBCAct2,mode="undirected")
+plot(gHBCAct2,vertex.size=3,vertex.label=NA,edge.width=0.6, main="HBC*")
+gGBC2 <- graph_from_adjacency_matrix(adjGBC2,mode="undirected")
+plot(gGBC2,vertex.size=3,vertex.label=NA,edge.width=0.6, main="GBC")
+giOSN2 <- graph_from_adjacency_matrix(adjiOSN2,mode="undirected")
+plot(gGBC2,vertex.size=3,vertex.label=NA,edge.width=0.6, main="iOSN")
+gmOSN2 <- graph_from_adjacency_matrix(adjmOSN2,mode="undirected")
+plot(gGBC2,vertex.size=3,vertex.label=NA,edge.width=0.6, main="mOSN")
+
+saveRDS(list("hbcAct" = adjHBCAct2, 
+             "GBC" = adjGBC2, 
+             "iOSN" = adjiOSN2, 
+             "mOSN" = adjmOSN2), file="adjMatrices_2core.rds")
+```
+
+## Community detection
+
+```{r}
+library(RColorBrewer)
+library(HCD)
+
+gradualPlot <- function(cl, A){
+  ncl <- length(unique(cl))
+  for(cc in 1:ncl){
+    id <- which(cl %in% (1:cc))
+    curG <- graph_from_adjacency_matrix(A[id,id],mode="undirected")
+      V(curG)$color <- cols[cl[names(V(curG))]]
+      lo <- layout_with_fr(curG)
+     plot(curG,
+         vertex.size=3,
+       vertex.label=NA,
+       edge.width=0.6,
+       vertex.frame.color=cols[cl[id]],
+       color=V(curG)$color,
+       layout = lo
+       )
+  }
+}
+
+## C5 category is according to gene ontology grouping: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4707969/pdf/nihms-743907.pdf
+geneSets <- msigdbr(species = "Mus musculus", category = "C5", subcategory = "BP")
+
+gsea <- function(genes, background, geneSets, n=10, minSize=5, name=NULL){
+  ### filter background to only include genes that we assessed.
+  geneSets <- geneSets[geneSets$gene_symbol %in% background,]
+  m_list <- geneSets %>% split(x = .$gene_symbol, f = .$gs_name)
+  # gene set must have at least minSize genes in background.
+  m_list <- m_list[unlist(lapply(m_list, length)) >= minSize]
+  
+  overlapPval <- unlist(lapply(m_list, function(gs){
+    # genes in community and gene set
+    inBoth <- sum(genes %in% gs)
+    # genes in community and not in gene set
+    inComOnly <- length(genes) - inBoth
+    # genes in background and gene set
+    inGsBack <- sum(background %in% gs)
+    # genes in background and not in gene set
+    outGsBack <- length(background) - inGsBack
+    m <- matrix(c(inBoth, inComOnly,
+           inGsBack, outGsBack),
+           nrow =2, ncol=2, byrow=TRUE,
+           dimnames = list(c("in community", "out community"),
+                           c("in gene set", "out gene set")))
+    fis <- fisher.test(m, alternative = "greater")
+    pval <- fis$p.value
+    return(pval)
+  }))
+  padj <- p.adjust(overlapPval, "fdr")
+  oo <- order(overlapPval, decreasing=FALSE)
+  res <- data.frame(geneSet = names(m_list)[oo[1:n]],
+                    pval = overlapPval[oo[1:n]],
+                    padj = padj[oo[1:n]],
+                    row.names = NULL)
+  kable(res, caption=name, label=name)
+}
+
+
+```
+
+### HBC*
+
+```{r}
+#set.seed(2)
+clHBCAct <- leiden(adjHBCAct2, resolution_parameter=.4, seed = 7)
+table(clHBCAct)
+
+gHBCAct <- graph_from_adjacency_matrix(adjHBCAct2,mode="undirected")
+cols <- brewer.pal(8, "Dark2")
+V(gHBCAct)$color <- cols[clHBCAct[names(V(gHBCAct))]]
+plot(gHBCAct,
+     vertex.size=3,
+     vertex.label=NA,
+     #vertex.frame.color=V(gHBC)$color,
+     color=V(gHBCAct)$color,
+     edge.width=0.6)
+comHBCAct <- make_clusters(gHBCAct, membership = clHBCAct)
+plot(comHBCAct, gHBCAct,vertex.size=3, vertex.label=NA, edge.width=0.6)
+
+## gradual plot
+gradualPlot(clHBCAct, adjHBCAct2)
+
+
+## gene set enrichment on HCD results
+ncl <- length(unique(comHBCAct$membership))
+kab <- list()
+# kabNames <- c("Krt / cell cycle / stimulus",
+#                 "Chromatin",
+#                 "Epigenetics, cell cycle",
+#                 "Cell cycle")
+kabNames <- c("Cell cycle, DNA damage",
+                "Epigenetics",
+                "(Epithelial) cell differentiation",
+                "Cell cycle, DNA replication",
+              "DNA replication")
+for(kk in 1:ncl){
+  genes <- rownames(adjHBCAct2)[which(comHBCAct$membership == kk)]
+  kab[[kk]] <- gsea(genes = genes,
+       background = TF.list,
+       geneSets = geneSets,
+       name = kabNames[kk])
+}
+kab
+```
+
+
+### GBC
+
+```{r}
+set.seed(3)
+clGBC <- leiden(adjGBC2, resolution_parameter=.4, seed=7)
+table(clGBC)
+
+gGBC <- graph_from_adjacency_matrix(adjGBC2,mode="undirected")
+cols <- brewer.pal(8, "Dark2")
+V(gGBC)$color <- cols[clGBC[names(V(gGBC))]]
+plot(gGBC,
+     vertex.size=3,
+     vertex.label=NA,
+     #vertex.frame.color=V(gHBC)$color,
+     color=V(gGBC)$color,
+     edge.width=0.6)
+comGBC <- make_clusters(gGBC, membership = clGBC)
+plot(comGBC, gGBC,vertex.size=3, vertex.label=NA, edge.width=0.6)
+
+## gradual plot
+gradualPlot(clGBC, adjGBC2)
+
+## gene set enrichment 
+ncl <- length(unique(comGBC$membership))
+kab <- list()
+# kabNames <- c("Chromatin, neuron/cell development",
+#                 "P53, DNA replication, cell cycle",
+#                 "Cell differentiation / signaling",
+#                 "Notch, signaling",
+#               "DNA repair")
+kabNames <- c("P53, DNA replication",
+                "Notch signaling",
+                "Cell differentiation / signaling",
+                "RNA splicing, DNA repair, epigenetics",
+                "NIK/NF Kappa-B signaling")
+for(kk in 1:ncl){
+  genes <- rownames(adjGBC2)[which(comGBC$membership == kk)]
+  print(gsea(genes = genes,
+       background = TF.list,
+       geneSets = geneSets,
+       name = kabNames[kk]))
+}
+kab
+```
+
+
+
+### iOSN
+
+```{r}
+set.seed(4)
+cliOSN <- leiden(adjiOSN2, resolution_parameter=.3, seed=7)
+table(cliOSN)
+
+
+giOSN <- graph_from_adjacency_matrix(adjiOSN2,mode="undirected")
+cols <- brewer.pal(8, "Dark2")
+V(giOSN)$color <- cols[cliOSN[names(V(giOSN))]]
+plot(giOSN,
+     vertex.size=3,
+     vertex.label=NA,
+     color=V(giOSN)$color,
+     edge.width=0.6)
+# igraph plot
+comiOSN <- make_clusters(giOSN, membership = cliOSN)
+plot(comiOSN, giOSN,vertex.size=3, vertex.label=NA, edge.width=0.6)
+
+## gradual plot
+gradualPlot(cliOSN, adjiOSN2)
+
+## gene set enrichment on HCD results
+ncl <- length(unique(comiOSN$membership))
+kab <- list()
+kabNames <- c("Neurogenesis",
+              "Defense (virus) response",
+              "P53, membrane",
+              "Axon extension, cytokinesis, epigenetic gene expression regulation",
+              "Cytokinesis, DNA replication",
+              "Interleukins, cell cycle, protein localization",
+              "Stem cell population maintenance, transcription")
+for(kk in 1:ncl){
+  genes <- rownames(adjiOSN2)[which(comiOSN$membership == kk)]
+  print(gsea(genes = genes,
+       background = TF.list,
+       geneSets = geneSets,
+       name = kabNames[kk]))
+}
+kab
+```
+
+
+
+### mOSN
+
+```{r}
+set.seed(2)
+clmOSN <- leiden(adjmOSN2, resolution_parameter=.4, seed=7)
+table(clmOSN)
+
+gmOSN <- graph_from_adjacency_matrix(adjmOSN2,mode="undirected")
+cols <- brewer.pal(8, "Dark2")
+V(gmOSN)$color <- cols[clmOSN[names(V(gmOSN))]]
+plot(gmOSN,
+     vertex.size=3,
+     vertex.label=NA,
+     color=V(gmOSN)$color,
+     edge.width=0.6)
+# igraph plot
+commOSN <- make_clusters(gmOSN, membership = clmOSN)
+plot(commOSN, gmOSN,vertex.size=3, vertex.label=NA, edge.width=0.6)
+
+## gradual plot
+gradualPlot(clmOSN, adjmOSN2)
+
+## gene set enrichment on HCD results
+ncl <- length(unique(commOSN$membership))
+kab <- list()
+kabNames <- c("Chromatin",
+              "Chromatin, transcription",
+              "TGBF-Beta pathway, neuron death",
+              "Viral processes",
+              "Cell projection, others")
+for(kk in 1:ncl){
+  genes <- rownames(adjmOSN2)[which(commOSN$membership == kk)]
+  print(gsea(genes = genes,
+       background = TF.list,
+       geneSets = geneSets,
+       name = kabNames[kk]))
+}
+kab
+```
