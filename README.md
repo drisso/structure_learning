@@ -1,7 +1,7 @@
 # Code to reproduce the analyses of Nguyen et al. (2020)
 
 In order to run the code in this repository, you need first to install the 
-`zinbgraph` R package, available at https://github.com/drisso/zinbgraph.
+`zinbgraph` R package, available at https://github.com/drisso/learn2count.
 
 ## Simulation results
 
