@@ -80,7 +80,7 @@ for (k  in 1: length(name.groupcond)) {
 }
 
 ###################  Estimating gene networks by zinb1
-library(zinbgraph)
+library(learn2count)
 
 for (k in 1:5) {
     name.file <- paste(k,"dataTFtranscelsalpha0595.RData", sep = "-")

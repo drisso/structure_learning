@@ -1,6 +1,6 @@
 library(countreg)
 library(HurdleNormal)
-library(zinbgraph)
+library(learn2count)
 library(BiocParallel)
 library(foreach)
 
