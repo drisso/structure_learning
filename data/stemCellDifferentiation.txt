@@ -1,0 +1,331 @@
+MGI Gene/Marker ID	Symbol	Name	Chr	Qualifier	Annotated Term	Context	Proteoform	Evidence	Inferred From	Reference(s)
+MGI:2449119	A2m	alpha-2-macroglobulin	6		stem cell differentiation			IDA		J:154112 	
+MGI:87911	Acvr1	activin A receptor, type 1	2		neural crest cell migration	happens in outflow tract		IMP	MGI:2651395 	J:90988 	
+MGI:107928	Aldh1a2	aldehyde dehydrogenase family 1, subfamily A2	9		neural crest cell development			IGI	MGI:1096359 MGI:2679699 	J:119939 	
+MGI:107928	Aldh1a2	aldehyde dehydrogenase family 1, subfamily A2	9		neural crest cell development	happens in head mesenchyme derived from neural crest,results in the development of migratory cranial neural crest cell		IMP	MGI:1857891 	J:104523 	
+MGI:104621	Alx1	ALX homeobox 1	10		neural crest cell migration			IEA	IPR033209 	J:72247 	
+MGI:88255	Anxa6	annexin A6	11		neural crest cell migration			IBA	PTN002574762 	J:265628 	
+MGI:101920	Ap2a2	adaptor-related protein complex 2, alpha 2 subunit	7		regulation of hematopoietic stem cell differentiation			NAS		J:215867 	
+MGI:1859147	Batf	basic leucine zipper transcription factor, ATF-like	12		hematopoietic stem cell differentiation			IMP		J:190258 	
+MGI:88180	Bmp4	bone morphogenetic protein 4	14		positive regulation of cardiac neural crest cell migration involved in outflow tract morphogenesis			IGI	P23359 	J:199300 	
+MGI:103302	Bmp7	bone morphogenetic protein 7	2		positive regulation of cardiac neural crest cell migration involved in outflow tract morphogenesis			IGI	P21275 	J:199300 	
+MGI:1338938	Bmpr1a	bone morphogenetic protein receptor, type 1A	14		neural crest cell development			IMP		J:153961 	
+MGI:1338938	Bmpr1a	bone morphogenetic protein receptor, type 1A	14	NOT	regulation of neural crest cell differentiation			IMP		J:89521 	
+MGI:1338938	Bmpr1a	bone morphogenetic protein receptor, type 1A	14	NOT	regulation of neural crest cell fate specification			IMP		J:89521 	
+MGI:5434104	Bvht	braveheart long non-coding RNA	18		stem cell differentiation			IMP		J:207590 	
+MGI:1276106	Ccnk	cyclin K	12		negative regulation of stem cell differentiation			IMP		J:192997 	
+MGI:106211	Cdc42	cell division cycle 42	4		cardiac neural crest cell migration involved in outflow tract morphogenesis	is a part of embryonic heart tube development,has the participant Ednra,has the participant Cdc42,has the participant Edn1		IMP		J:279375 	
+MGI:88355	Cdh2	cadherin 2	18		neural crest cell development			IMP		J:297286 	
+MGI:1277162	Cdk6	cyclin-dependent kinase 6	5		hematopoietic stem cell differentiation			IMP	MGI:3833563 MGI:5141514 	J:174697 	
+MGI:1277162	Cdk6	cyclin-dependent kinase 6	5		regulation of hematopoietic stem cell differentiation			IMP	MGI:3053975 	J:220783 	
+MGI:1098802	Cdk12	cyclin-dependent kinase 12	11		negative regulation of stem cell differentiation			IMP		J:192997 	
+MGI:1916812	Cdk13	cyclin-dependent kinase 13	13		negative regulation of stem cell differentiation			IMP		J:192997 	
+MGI:101757	Cfl1	cofilin 1, non-muscle	19		neural crest cell migration	happens in embryo,results in the movement of migratory neural crest cell		IMP	MGI:3574399 	J:96452 	
+MGI:2448567	Chd2	chromodomain helicase DNA binding protein 2	7		hematopoietic stem cell differentiation	happens in liver		IMP	MGI:3800602 	J:146176 	
+MGI:1306784	Cited2	Cbp/p300-interacting transactivator, with Glu/Asp-rich carboxy-terminal domain, 2	10		cardiac neural crest cell development involved in heart development	happens in embryo		IMP	MGI:2179740 	J:76593 	
+MGI:1345964	Coro1c	coronin, actin binding protein 1C	5		neural crest cell migration			IBA	PTN002586584 	J:265628 	
+MGI:1345964	Coro1c	coronin, actin binding protein 1C	5		neural crest cell migration			ISO	Q9ULV4 	J:164563 	
+MGI:88276	Ctnnb1	catenin (cadherin associated protein), beta 1	9		canonical Wnt signaling pathway involved in mesenchymal stem cell differentiation	is a part of embryonic organ development,happens in ureteral mesenchyme,has the participant Tbx2,has the participant Tbx3		IMP	MGI:2148567 MGI:3841145 	J:272619 	
+MGI:88276	Ctnnb1	catenin (cadherin associated protein), beta 1	9		mesenchymal stem cell differentiation			ISO	P35222 	J:164563 	
+MGI:1096359	Cyp26a1	cytochrome P450, family 26, subfamily a, polypeptide 1	19		neural crest cell development			IGI	MGI:2679699 	J:119939 	
+MGI:2679699	Cyp26c1	cytochrome P450, family 26, subfamily c, polypeptide 1	19		neural crest cell development			IGI	MGI:1096359 	J:119939 	
+MGI:1919412	Dhx36	DEAH (Asp-Glu-Ala-His) box polypeptide 36	3		positive regulation of cardioblast differentiation			IMP		J:265627 	
+MGI:2177178	Dicer1	dicer 1, ribonuclease type III	12		cardiac neural crest cell development involved in outflow tract morphogenesis			IMP	MGI:3589208 	J:166758 	
+MGI:2177178	Dicer1	dicer 1, ribonuclease type III	12		regulation of stem cell differentiation			IMP	MGI:3589287 	J:96031 	
+MGI:1859287	Dnmt3l	DNA (cytosine-5-)-methyltransferase 3-like	10		stem cell differentiation			IMP		J:206847 	
+MGI:95283	Edn1	endothelin 1	13		cardiac neural crest cell migration involved in outflow tract morphogenesis	is a part of embryonic heart tube development,has the participant Ednra,has the participant Cdc42		IDA		J:279375 	
+MGI:95283	Edn1	endothelin 1	13		neural crest cell development	happens in 1st branchial arch mesenchyme derived from neural crest,results in the development of migratory cranial neural crest cell		IMP	MGI:1857637 	J:93876 	
+MGI:95283	Edn1	endothelin 1	13		neural crest cell development	happens in 1st branchial arch mandibular component mesenchyme derived from neural crest,results in the development of migratory cranial neural crest cell|happens in 1st branchial arch maxillary component mesenchyme derived from neural crest,results in the development of migratory cranial neural crest cell|happens in 2nd branchial arch mesenchyme derived from neural crest,results in the development of migratory cranial neural crest cell|happens in 3rd branchial arch mesenchyme derived from neural crest,results in the development of migratory cranial neural crest cell		IMP	MGI:1857637 	J:49658 	
+MGI:95283	Edn1	endothelin 1	13		neural crest cell differentiation	is a part of pharyngeal arch artery morphogenesis,has the participant Ednra		IMP	MGI:1857637 	J:204461 	
+MGI:95283	Edn1	endothelin 1	13		neural crest cell fate commitment	is a part of pharyngeal arch artery morphogenesis,has the participant Ednra		IMP	MGI:1857637 	J:204461 	
+MGI:95285	Edn3	endothelin 3	2		neural crest cell migration	happens in colon,results in the movement of migratory neural crest cell		IMP	MGI:1856392 	J:48411 	
+MGI:105923	Ednra	endothelin receptor type A	8		cardiac neural crest cell migration involved in outflow tract morphogenesis	is a part of embryonic heart tube development,has the participant Cdc42,has the participant Edn1		IMP	MGI:1857473 	J:279375 	
+MGI:105923	Ednra	endothelin receptor type A	8		cardiac neural crest cell migration involved in outflow tract morphogenesis	is a part of embryonic heart tube development,has the participant Cdc42,has the participant Edn1		IMP	MGI:2687362 	J:279375 	
+MGI:105923	Ednra	endothelin receptor type A	8		neural crest cell development	happens in Meckel's cartilage|happens in hyoid cartilage condensation|happens in basisphenoid bone|happens in mandible|happens in soft palate|happens in incus|happens in malleus|happens in middle ear mesenchyme|happens in trigeminal ganglion|happens in facial ganglion|happens in glossopharyngeal ganglion|happens in aorta		IMP	MGI:1857473 	J:46639 	
+MGI:105923	Ednra	endothelin receptor type A	8		neural crest cell development	results in the development of migratory neural crest cell		IMP	MGI:1857473 	J:93183 	
+MGI:105923	Ednra	endothelin receptor type A	8		neural crest cell development	happens in 1st branchial arch mesenchyme derived from neural crest,happens in 1st branchial arch mesenchyme derived from neural crest,results in the development of migratory cranial neural crest cell		IMP		J:93876 	
+MGI:105923	Ednra	endothelin receptor type A	8		neural crest cell differentiation	has the participant Six1		IGI	MGI:102780 	J:241567 	
+MGI:105923	Ednra	endothelin receptor type A	8		neural crest cell differentiation			IMP	MGI:2687362 	J:149166 	
+MGI:105923	Ednra	endothelin receptor type A	8		neural crest cell differentiation	is a part of pharyngeal arch artery morphogenesis,has the participant Edn1		IMP	MGI:3773698 	J:204461 	
+MGI:105923	Ednra	endothelin receptor type A	8		neural crest cell differentiation	is a part of pharyngeal arch artery morphogenesis,has the participant Edn1		IMP	MGI:4867385 	J:204461 	
+MGI:105923	Ednra	endothelin receptor type A	8		neural crest cell differentiation			IMP		J:149166 	
+MGI:105923	Ednra	endothelin receptor type A	8		neural crest cell fate commitment	is a part of cranial skeletal system development		IMP	MGI:1857473 	J:118663 	
+MGI:105923	Ednra	endothelin receptor type A	8		neural crest cell fate commitment	is a part of pharyngeal arch artery morphogenesis,has the participant Edn1		IMP	MGI:3773698 	J:204461 	
+MGI:105923	Ednra	endothelin receptor type A	8		neural crest cell fate commitment	is a part of pharyngeal arch artery morphogenesis,has the participant Edn1		IMP	MGI:4867385 	J:204461 	
+MGI:102720	Ednrb	endothelin receptor type B	14		neural crest cell migration	happens in gut,results in the movement of neuroblast (sensu Vertebrata)|results in the movement of melanoblast		IMP		J:58698 	
+MGI:102708	Efnb1	ephrin B1	X		neural crest cell migration	happens in head mesenchyme derived from neural crest		IMP	MGI:3039290 	J:89008 	
+MGI:1353449	Eif2ak2	eukaryotic translation initiation factor 2-alpha kinase 2	17		regulation of hematopoietic stem cell differentiation			IMP		J:196300 	
+MGI:2673679	Ell3	elongation factor RNA polymerase II-like 3	2		stem cell differentiation			IMP		J:187901 J:190435 	
+MGI:95392	Eng	endoglin	2	NOT	regulation of cardiac neural crest cell migration involved in outflow tract morphogenesis			IMP		J:124260 	
+MGI:1201683	Eomes	eomesodermin	9		cardioblast differentiation			IMP	MGI:3774028 	J:176969 	
+MGI:106653	Epcam	epithelial cell adhesion molecule	17		stem cell differentiation			ISO	P16422 	J:164563 	
+MGI:2143991	Epop	elongin BC and polycomb repressive complex 2 associated protein	11		stem cell differentiation			IMP		J:238487 J:238488 	
+MGI:104771	Erbb4	erb-b2 receptor tyrosine kinase 4	1		neural crest cell migration			IMP		J:60190 	
+MGI:95413	Ercc2	excision repair cross-complementing rodent repair deficiency, complementation group 2	7		hematopoietic stem cell differentiation	happens in bone marrow,results in the differentiation of hematopoietic stem cell		IMP	MGI:2183947 	J:122781 	
+MGI:1352467	Esr1	estrogen receptor 1 (alpha)	10		stem cell differentiation			IDA		J:220326 	
+MGI:1346832	Esrrb	estrogen related receptor, beta	12		negative regulation of stem cell differentiation			IMP		J:240583 	
+MGI:99423	Etv4	ets variant 4	11		stem cell differentiation	happens in mammary gland epithelium,results in the differentiation of somatic stem cell		IMP	MGI:2445834 	J:143771 	
+MGI:894663	Ext1	exostosin glycosyltransferase 1	15		hematopoietic stem cell differentiation			IMP		J:286759 	
+MGI:894663	Ext1	exostosin glycosyltransferase 1	15		neural crest cell differentiation	is a part of outflow tract morphogenesis,is a part of heart formation		IMP		J:243036 	
+MGI:1915925	Fam172a	family with sequence similarity 172, member A	13		neural crest cell development			IMP		J:260599 	
+MGI:95516	Fgf2	fibroblast growth factor 2	3		stem cell development			IMP		J:84335 	
+MGI:1096383	Fgf15	fibroblast growth factor 15	7		neural crest cell migration	happens in outflow tract,results in the movement of migratory neural crest cell		IMP	MGI:3044957 	J:97317 	
+MGI:95523	Fgfr2	fibroblast growth factor receptor 2	7		squamous basal epithelial stem cell differentiation involved in prostate gland acinus development	happens in prostate epithelium		IMP	MGI:3044679 	J:119911 	
+MGI:95566	Fn1	fibronectin 1	1		neural crest cell migration involved in autonomic nervous system development			ISO	P02751 	J:229828 	
+MGI:95568	Folr1	folate receptor 1 (adult)	7		cardiac neural crest cell migration involved in outflow tract morphogenesis	happens in UBERON:0000068		IMP		J:124492 	
+MGI:95568	Folr1	folate receptor 1 (adult)	7		neural crest cell migration involved in heart formation	happens in UBERON:0000068		IMP		J:124492 	
+MGI:1347472	Foxa1	forkhead box A1	12		respiratory basal cell differentiation			IMP	MGI:2653543 	J:104973 	
+MGI:1347466	Foxc1	forkhead box C1	13		neural crest cell development	happens in 1st branchial arch,results in the development of migratory neural crest cell|happens in 2nd branchial arch,results in the development of migratory neural crest cell|happens in 3rd branchial arch,results in the development of migratory neural crest cell		IGI	MGI:1347481 	J:119303 	
+MGI:1347466	Foxc1	forkhead box C1	13		positive regulation of hematopoietic stem cell differentiation			IMP		J:210256 	
+MGI:1347481	Foxc2	forkhead box C2	8		neural crest cell development	happens in 1st branchial arch,results in the development of migratory neural crest cell|happens in 2nd branchial arch,results in the development of migratory neural crest cell|happens in 3rd branchial arch,results in the development of migratory neural crest cell		IGI	MGI:1347466 	J:119303 	
+MGI:1891915	Foxo4	forkhead box O4	X		stem cell differentiation			ISO	P98177 	J:164563 	
+MGI:1196625	Fzd1	frizzled class receptor 1	5		canonical Wnt signaling pathway involved in mesenchymal stem cell differentiation			ISO	Q9UP38 	J:164563 	
+MGI:95668	Gbx2	gastrulation brain homeobox 2	1		neural crest cell migration	happens in 4th branchial arch mesenchyme derived from neural crest,results in the movement of migratory cranial neural crest cell		IMP	MGI:1857634 	J:152319 	
+MGI:95668	Gbx2	gastrulation brain homeobox 2	1		neural crest cell migration	happens in 4th branchial arch mesenchyme derived from neural crest,results in the movement of migratory neural crest cell		IMP	MGI:1857634 	J:100584 	
+MGI:95668	Gbx2	gastrulation brain homeobox 2	1		neural crest cell migration	happens in embryo		IMP		J:195357 	
+MGI:107430	Gdnf	glial cell line derived neurotrophic factor	15		neural crest cell migration			ISO	P39905 	J:73065 	
+MGI:107430	Gdnf	glial cell line derived neurotrophic factor	15		neural crest cell migration involved in autonomic nervous system development			ISO	P39905 	J:73065 	
+MGI:107671	Gpm6a	glycoprotein m6a	8		stem cell differentiation			ISO	P51674 	J:164563 	
+MGI:1344337	Grem1	gremlin 1, DAN family BMP antagonist	2		positive regulation of transcription from RNA polymerase II promoter involved in myocardial precursor cell differentiation			IDA		J:182488 	
+MGI:95841	Gsc	goosecoid homeobox	12		neural crest cell fate specification			ISO	P56915 	J:164563 	
+MGI:1861437	Gsk3b	glycogen synthase kinase 3 beta	16		negative regulation of mesenchymal stem cell differentiation			ISO	P49841 	J:164563 	
+MGI:1861437	Gsk3b	glycogen synthase kinase 3 beta	16		positive regulation of stem cell differentiation	regulates the differentiation of embryonic stem cell		IMP		J:183670 	
+MGI:2176207	H1f8	H1.8 linker histone	6		negative regulation of stem cell differentiation			IMP		J:207809 	
+MGI:103580	Hand2	heart and neural crest derivatives expressed 2	8		cardiac neural crest cell development involved in outflow tract morphogenesis			IMP		J:155265 	
+MGI:103580	Hand2	heart and neural crest derivatives expressed 2	8		cardiac neural crest cell migration involved in outflow tract morphogenesis	happens in outflow tract		IMP	MGI:2386570 MGI:3803647 	J:160022 	
+MGI:103580	Hand2	heart and neural crest derivatives expressed 2	8		neural crest cell development	happens in 1st branchial arch mandibular component mesenchyme derived from neural crest|happens in 1st branchial arch maxillary component mesenchyme derived from neural crest|happens in 2nd branchial arch mesenchyme derived from neural crest|happens in 3rd branchial arch mesenchyme derived from neural crest|happens in 4th branchial arch mesenchyme derived from neural crest		IMP	MGI:1857639 	J:49658 	
+MGI:104853	Hes1	hes family bHLH transcription factor 1	16		cardiac neural crest cell development involved in outflow tract morphogenesis	happens in heart		IMP		J:151566 	
+MGI:104853	Hes1	hes family bHLH transcription factor 1	16		negative regulation of stem cell differentiation			ISO	Q14469 	J:164563 	
+MGI:104876	Hes5	hes family bHLH transcription factor 5	4		negative regulation of stem cell differentiation			ISO	Q5TA89 	J:164563 	
+MGI:96071	Hesx1	homeobox gene expressed in ES cells	14		stem cell differentiation			IMP		J:294762 	
+MGI:96086	Hhex	hematopoietically expressed homeobox	19		hepatoblast differentiation	happens in liver		IMP	MGI:3721426 	J:124126 	
+MGI:106918	Hif1a	hypoxia inducible factor 1, alpha subunit	12		neural crest cell migration	happens in 2nd branchial arch|happens in 3rd branchial arch|happens in outflow tract		IMP	MGI:2179429 	J:102537 	
+MGI:98505	Hnf1b	HNF1 homeobox B	11		hepatoblast differentiation			IMP	MGI:1857856 	J:139252 	
+MGI:1858195	Hnrnpu	heterogeneous nuclear ribonucleoprotein U	1		negative regulation of stem cell differentiation			IMP		J:243396 	
+MGI:1858195	Hnrnpu	heterogeneous nuclear ribonucleoprotein U	1		negative regulation of stem cell differentiation			ISO	Q00839 	J:164563 	
+MGI:96179	Hoxa7	homeobox A7	6		stem cell differentiation			IDA		J:154112 	
+MGI:96185	Hoxb4	homeobox B4	11		hematopoietic stem cell differentiation			ISO	P17483 	J:164563 	
+MGI:96185	Hoxb4	homeobox B4	11		positive regulation of stem cell differentiation			ISO	P17483 	J:164563 	
+MGI:96208	Hoxd4	homeobox D4	2		stem cell differentiation			IDA		J:154112 	
+MGI:96245	Hspa9	heat shock protein 9	18		negative regulation of hematopoietic stem cell differentiation			IMP		J:233573 	
+MGI:109323	Htr2b	5-hydroxytryptamine (serotonin) receptor 2B	1		neural crest cell differentiation			IMP		J:40606 	
+MGI:109323	Htr2b	5-hydroxytryptamine (serotonin) receptor 2B	1		neural crest cell migration			IMP		J:40606 	
+MGI:101791	Isl1	ISL1 transcription factor, LIM/homeodomain	13		cardiac muscle cell myoblast differentiation	happens in embryo		IMP		J:158135 	
+MGI:101791	Isl1	ISL1 transcription factor, LIM/homeodomain	13		neural crest cell migration			IGI	MGI:108075 	J:110602 	
+MGI:1095416	Jag1	jagged 1	2		cardiac neural crest cell development involved in outflow tract morphogenesis			IMP		J:152574 	
+MGI:1095416	Jag1	jagged 1	2		negative regulation of stem cell differentiation			ISO	P78504 	J:164563 	
+MGI:104813	Jarid2	jumonji, AT rich interactive domain 2	13		stem cell differentiation			IMP		J:157630 J:157724 J:158991 	
+MGI:2661430	Kbtbd8	kelch repeat and BTB (POZ) domain containing 8	6		neural crest cell development			ISO	Q8NFY9 	J:164563 	
+MGI:98847	Kdm3a	lysine (K)-specific demethylase 3A	6		regulation of stem cell differentiation			IMP		J:125698 	
+MGI:1924054	Kdm4c	lysine (K)-specific demethylase 4C	4		regulation of stem cell differentiation			IDA		J:125698 	
+MGI:96677	Kit	KIT proto-oncogene receptor tyrosine kinase	5		stem cell differentiation			IMP		J:147651 	
+MGI:96974	Kitl	kit ligand	10		neural crest cell migration	happens in trunk mesenchyme derived from neural crest,results in the movement of melanocyte		IDA		J:69377 	
+MGI:2385619	Klhl12	kelch-like 12	1		neural crest cell development			ISO	Q53G59 	J:164563 	
+MGI:2443584	L3mbtl2	L3MBTL2 polycomb repressive complex 1 subunit	15		stem cell differentiation			IMP	MGI:5810650 	J:227373 	
+MGI:105382	Lama5	laminin, alpha 5	2		neural crest cell migration	happens in embryo,results in the movement of migratory cranial neural crest cell|happens in embryo,results in the movement of migratory trunk neural crest cell		IMP	MGI:1934917 	J:104151 	
+MGI:1925139	Lbh	limb-bud and heart	17		negative regulation of stem cell differentiation			IMP		J:220326 	
+MGI:96787	Lif	leukemia inhibitory factor	11		stem cell differentiation			IDA		J:190157 	
+MGI:1890546	Lin28a	lin-28 homolog A	4		stem cell differentiation			IMP		J:152654 J:152656 	
+MGI:1289247	Lmbr1l	limb region 1 like	15		hematopoietic stem cell differentiation			IMP		J:274568 	
+MGI:1298218	Lrp6	low density lipoprotein receptor-related protein 6	6		canonical Wnt signaling pathway involved in cardiac neural crest cell differentiation involved in heart development	happens in 3rd branchial arch mesenchyme derived from neural crest		IMP	MGI:2156191 	J:155248 	
+MGI:1298218	Lrp6	low density lipoprotein receptor-related protein 6	6		neural crest cell differentiation			ISO	O75581 	J:164563 	
+MGI:1101355	Ltbp3	latent transforming growth factor beta binding protein 3	19		positive regulation of mesenchymal stem cell differentiation			ISO	Q9NS15 	J:164563 	
+MGI:1346858	Mapk1	mitogen-activated protein kinase 1	16		cardiac neural crest cell development involved in heart development			IGI	MGI:1346859 	J:144862 	
+MGI:1346858	Mapk1	mitogen-activated protein kinase 1	16		neural crest cell development			IGI	MGI:1346859 	J:144862 	
+MGI:1346859	Mapk3	mitogen-activated protein kinase 3	7		cardiac neural crest cell development involved in heart development			IGI	MGI:1346858 	J:144862 	
+MGI:1346859	Mapk3	mitogen-activated protein kinase 3	7		neural crest cell development			IGI	MGI:1346858 	J:144862 	
+MGI:99458	Mef2c	myocyte enhancer factor 2C	13		neural crest cell differentiation			IMP		J:173609 	
+MGI:1922672	Mettl5	methyltransferase like 5	2		stem cell differentiation			IMP		J:289086 J:301381 	
+MGI:3619363	Mir34a	microRNA 34a	4		positive regulation of stem cell differentiation			IMP		J:163558 	
+MGI:2676912	Mir99a	microRNA 99a	16		hematopoietic stem cell differentiation	happens in bone marrow		IDA		J:163607 	
+MGI:3619057	Mir100	microRNA 100	9		positive regulation of stem cell differentiation			IMP		J:163558 	
+MGI:2676809	Mir125a	microRNA 125a	17		negative regulation of stem cell differentiation	regulates the differentiation of embryonic stem cell		IGI	MGI:1921298 	J:192401 	
+MGI:2676809	Mir125a	microRNA 125a	17		negative regulation of stem cell differentiation	regulates the differentiation of embryonic stem cell		IMP		J:192401 	
+MGI:2676810	Mir125b-1	microRNA 125b-1	9		hematopoietic stem cell differentiation	happens in bone marrow		IDA		J:163607 	
+MGI:3618706	Mir125b-2	microRNA 125b-2	16		hematopoietic stem cell differentiation	happens in bone marrow		IDA		J:163607 	
+MGI:2676811	Mir126a	microRNA 126a	2		hematopoietic stem cell differentiation	happens in bone marrow		IDA		J:163607 	
+MGI:2676816	Mir130a	microRNA 130a	2		hematopoietic stem cell differentiation	happens in bone marrow		IDA		J:163607 	
+MGI:2676822	Mir137	microRNA 137	3		positive regulation of stem cell differentiation			IMP		J:163558 	
+MGI:2676839	Mir154	microRNA 154	12		negative regulation of mesenchymal stem cell differentiation			IDA		J:228158 	
+MGI:2676839	Mir154	microRNA 154	12		negative regulation of mesenchymal stem cell differentiation			IMP		J:228158 	
+MGI:2676840	Mir155	microRNA 155	16		hematopoietic stem cell differentiation	happens in bone marrow		IDA		J:163607 	
+MGI:3618737	Mir181c	microRNA 181c	8		hematopoietic stem cell differentiation	happens in bone marrow		IDA		J:163607 	
+MGI:3718458	Mir193b	microRNA 193b	16		hematopoietic stem cell differentiation	happens in bone marrow		IDA		J:163607 	
+MGI:3619450	Mir452	microRNA 452	X		cardiac neural crest cell development involved in outflow tract morphogenesis			IDA		J:166758 	
+MGI:3619431	Mir542	microRNA 542	X		hematopoietic stem cell differentiation	happens in bone marrow		IDA		J:163607 	
+MGI:2676797	Mirlet7e	microRNA let7e	17		hematopoietic stem cell differentiation	happens in bone marrow		IDA		J:163607 	
+MGI:1917372	Mllt3	myeloid/lymphoid or mixed-lineage leukemia; translocated to, 3	4		hematopoietic stem cell differentiation			ISO	P42568 	J:164563 	
+MGI:1923876	Msi2	musashi RNA-binding protein 2	11		stem cell development			IMP		J:81794 	
+MGI:97168	Msx1	msh homeobox 1	5		stem cell differentiation	happens in branchial arch,results in the differentiation of preosteoblast		IGI	MGI:97169 	J:125119 	
+MGI:97169	Msx2	msh homeobox 2	13		stem cell differentiation	happens in branchial arch,results in the differentiation of preosteoblast		IGI	MGI:97168 	J:125119 	
+MGI:1929260	Mtch2	mitochondrial carrier 2	2		positive regulation of stem cell differentiation			IMP		J:267823 	
+MGI:105050	Mtf2	metal response element binding transcription factor 2	5		stem cell differentiation			IMP		J:157068 	
+MGI:2137495	Myocd	myocardin	11		positive regulation of transcription from RNA polymerase II promoter involved in myocardial precursor cell differentiation			ISO	Q8IZQ8 	J:164563 	
+MGI:2687207	N4bp2l2	NEDD4 binding protein 2-like 2	5		negative regulation of hematopoietic stem cell differentiation			ISO	Q92802 	J:164563 	
+MGI:1919200	Nanog	Nanog homeobox	6		stem cell differentiation	results in the differentiation of embryonic stem cell		IDA		J:156932 	
+MGI:1919200	Nanog	Nanog homeobox	6		stem cell differentiation			IMP		J:114674 	
+MGI:1276535	Ncoa3	nuclear receptor coactivator 3	2		negative regulation of stem cell differentiation			IMP		J:192962 	
+MGI:1931035	Nelfb	negative elongation factor complex member B	2		negative regulation of stem cell differentiation			IMP		J:148508 	
+MGI:1931035	Nelfb	negative elongation factor complex member B	2		stem cell differentiation			IMP		J:268012 	
+MGI:108420	Nfe2l2	nuclear factor, erythroid derived 2, like 2	2		negative regulation of hematopoietic stem cell differentiation			IMP		J:195199 	
+MGI:97350	Nkx2-5	NK2 homeobox 5	17		positive regulation of cardioblast differentiation			IMP		J:134004 	
+MGI:1918019	Nolc1	nucleolar and coiled-body phosphoprotein 1	19		neural crest cell development			ISO	Q14978 	J:164563 	
+MGI:97363	Notch1	notch 1	2		negative regulation of stem cell differentiation			ISO	P46531 	J:164563 	
+MGI:97363	Notch1	notch 1	2		regulation of transcription from RNA polymerase II promoter involved in myocardial precursor cell differentiation			IMP		J:170885 	
+MGI:96083	Nrg1	neuregulin 1	8		cardiac muscle cell myoblast differentiation			ISO	Q02297 	J:164563 	
+MGI:106206	Nrp1	neuropilin 1	8	NOT	cardiac neural crest cell migration involved in outflow tract morphogenesis			IMP		J:225355 	
+MGI:106206	Nrp1	neuropilin 1	8		neural crest cell migration involved in autonomic nervous system development	results in the movement of migratory cranial neural crest cell		IMP		J:134486 	
+MGI:106206	Nrp1	neuropilin 1	8		neural crest cell migration involved in autonomic nervous system development	results in the movement of migratory trunk neural crest cell		IMP		J:149474 	
+MGI:106206	Nrp1	neuropilin 1	8		neural crest cell migration involved in autonomic nervous system development			IMP		J:209482 	
+MGI:106206	Nrp1	neuropilin 1	8		ventral trunk neural crest cell migration			IMP		J:149474 	
+MGI:1100492	Nrp2	neuropilin 2	1		neural crest cell migration	happens in trunk mesenchyme derived from neural crest,results in the movement of migratory trunk neural crest cell		IMP	MGI:2137037 	J:104892 	
+MGI:1100492	Nrp2	neuropilin 2	1		neural crest cell migration involved in autonomic nervous system development	results in the movement of migratory cranial neural crest cell		IMP		J:134486 	
+MGI:1100492	Nrp2	neuropilin 2	1		neural crest cell migration involved in autonomic nervous system development	results in the movement of migratory trunk neural crest cell		IMP		J:149474 	
+MGI:1100492	Nrp2	neuropilin 2	1		ventral trunk neural crest cell migration			IMP		J:149474 	
+MGI:108417	Nrtn	neurturin	17		neural crest cell migration			ISO	Q99748 	J:73065 	
+MGI:107252	Nsun2	NOL1/NOP2/Sun domain family member 2	13		regulation of stem cell differentiation			IMP		J:179810 	
+MGI:1915469	Nudt21	nudix (nucleoside diphosphate linked moiety X)-type motif 21	8		positive regulation of stem cell differentiation			IMP		J:255517 	
+MGI:1915345	Ociad1	OCIA domain containing 1	5		regulation of stem cell differentiation			IMP		J:243387 	
+MGI:1344424	Osr1	odd-skipped related transcription factor 1	12		stem cell differentiation			IDA		J:172946 	
+MGI:1859615	Otud5	OTU domain containing 5	X		neural crest cell differentiation			ISO	Q96G74 	J:164563 	
+MGI:1338039	Ovol2	ovo like zinc finger 2	2		neural crest cell migration	happens in branchial arch,results in the movement of migratory cranial neural crest cell		IMP	MGI:3522498 	J:106405 	
+MGI:97486	Pax2	paired box 2	19		stem cell differentiation			IDA		J:172946 	
+MGI:97487	Pax3	paired box 3	1		neural crest cell migration	happens in embryo,results in the movement of migratory neural crest cell		IMP	MGI:3043030 	J:93195 	
+MGI:97490	Pax6	paired box 6	2		neural crest cell migration			ISO	RGD:3258 	J:155856 	
+MGI:109283	Pdcd6	programmed cell death 6	13		neural crest cell development			ISO	O75340 	J:164563 	
+MGI:97530	Pdgfra	platelet derived growth factor receptor, alpha polypeptide	5		regulation of mesenchymal stem cell differentiation			ISO	P16234 	J:164563 	
+MGI:102851	Pdx1	pancreatic and duodenal homeobox 1	5		stem cell differentiation			ISO	RGD:62387 	J:155856 	
+MGI:1915148	Pef1	penta-EF hand domain containing 1	4		neural crest cell development			ISO	Q9UBV8 	J:164563 	
+MGI:2140327	Phactr4	phosphatase and actin regulator 4	4		neural crest cell migration			IBA	PTN002653873 	J:265628 	
+MGI:2140327	Phactr4	phosphatase and actin regulator 4	4		neural crest cell migration			IMP		J:179369 	
+MGI:1921266	Phf19	PHD finger protein 19	2		stem cell differentiation			IMP		J:196211 J:196212 	
+MGI:1100882	Phox2b	paired-like homeobox 2b	5		neural crest cell migration involved in autonomic nervous system development			IMP		J:55391 	
+MGI:109340	Pitx2	paired-like homeodomain transcription factor 2	3		cardiac neural crest cell migration involved in outflow tract morphogenesis			IMP		J:80691 	
+MGI:101893	Pou5f1	POU domain, class 5, transcription factor 1	17		stem cell differentiation	results in the differentiation of embryonic stem cell		IDA		J:156932 	
+MGI:101893	Pou5f1	POU domain, class 5, transcription factor 1	17		stem cell differentiation			IMP		J:195215 J:259122 	
+MGI:1920093	Prdm4	PR domain containing 4	10		regulation of stem cell differentiation			ISO	RGD:619929 	J:155856 	
+MGI:1916034	Prickle1	prickle planar cell polarity protein 1	15		negative regulation of cardiac muscle cell myoblast differentiation			ISO	Q96MT3 	J:164563 	
+MGI:104779	Prkdc	protein kinase, DNA activated, catalytic polypeptide	16		regulation of hematopoietic stem cell differentiation			IMP		J:287062 	
+MGI:1916327	Psmd11	proteasome (prosome, macropain) 26S subunit, non-ATPase, 11	11		stem cell differentiation			ISO	O00231 	J:164563 	
+MGI:97804	Ptn	pleiotrophin	6		positive regulation of stem cell differentiation			IMP		J:91002 	
+MGI:97810	Ptprc	protein tyrosine phosphatase, receptor type, C	1		stem cell development			ISO	P08575 	J:164563 	
+MGI:1931749	Pum1	pumilio RNA-binding family member 1	4		stem cell differentiation			IMP		J:221548 	
+MGI:1925947	Pus7	pseudouridylate synthase 7	5		regulation of hematopoietic stem cell differentiation			ISO	Q96PZ0 	J:164563 	
+MGI:1914735	Pwp1	PWP1 homolog, endonuclein	10		positive regulation of stem cell differentiation			IMP		J:223575 	
+MGI:2443088	Radil	Ras association and DIL domains	5		neural crest cell migration			IBA	PTN002699125 	J:265628 	
+MGI:3610364	Rbm24	RNA binding motif protein 24	13		positive regulation of stem cell differentiation			ISO	Q9BX46 	J:164563 	
+MGI:96522	Rbpj	recombination signal binding protein for immunoglobulin kappa J region	5		regulation of transcription from RNA polymerase II promoter involved in myocardial precursor cell differentiation			IMP		J:178290 	
+MGI:1924238	Rdh10	retinol dehydrogenase 10 (all-trans)	1		neural crest cell development			IMP		J:121229 	
+MGI:104897	Rest	RE1-silencing transcription factor	5		cardiac muscle cell myoblast differentiation			IDA		J:173137 	
+MGI:104897	Rest	RE1-silencing transcription factor	5		negative regulation of amniotic stem cell differentiation			ISO	Q13127 	J:164563 	
+MGI:104897	Rest	RE1-silencing transcription factor	5		negative regulation of mesenchymal stem cell differentiation			ISO	Q13127 	J:164563 	
+MGI:97902	Ret	ret proto-oncogene	6		neural crest cell migration	happens in esophagus,results in the movement of migratory neural crest cell		IMP	MGI:2449909 	J:106244 	
+MGI:99829	Runx2	runt related transcription factor 2	17		stem cell differentiation	happens in branchial arch,results in the differentiation of preosteoblast		IDA		J:125119 	
+MGI:107558	Sema3a	sema domain, immunoglobulin domain (Ig), short basic domain, secreted, (semaphorin) 3A	5		neural crest cell migration			IBA	PTN000867340 	J:265628 	
+MGI:107558	Sema3a	sema domain, immunoglobulin domain (Ig), short basic domain, secreted, (semaphorin) 3A	5		neural crest cell migration involved in autonomic nervous system development	results in the movement of migratory cranial neural crest cell		IMP		J:134486 	
+MGI:107558	Sema3a	sema domain, immunoglobulin domain (Ig), short basic domain, secreted, (semaphorin) 3A	5		neural crest cell migration involved in autonomic nervous system development	results in the movement of migratory trunk neural crest cell		IMP		J:149474 	
+MGI:107558	Sema3a	sema domain, immunoglobulin domain (Ig), short basic domain, secreted, (semaphorin) 3A	5		neural crest cell migration involved in autonomic nervous system development			IMP		J:209482 	
+MGI:107558	Sema3a	sema domain, immunoglobulin domain (Ig), short basic domain, secreted, (semaphorin) 3A	5		neural crest cell migration involved in sympathetic nervous system development			IMP		J:209482 	
+MGI:107558	Sema3a	sema domain, immunoglobulin domain (Ig), short basic domain, secreted, (semaphorin) 3A	5		ventral trunk neural crest cell migration			IMP		J:149474 	
+MGI:107561	Sema3b	sema domain, immunoglobulin domain (Ig), short basic domain, secreted, (semaphorin) 3B	9		neural crest cell migration			IBA	PTN000867340 	J:265628 	
+MGI:107557	Sema3c	sema domain, immunoglobulin domain (Ig), short basic domain, secreted, (semaphorin) 3C	5		neural crest cell migration			IBA	PTN000867340 	J:265628 	
+MGI:107557	Sema3c	sema domain, immunoglobulin domain (Ig), short basic domain, secreted, (semaphorin) 3C	5		neural crest cell migration	happens in outflow tract,results in the movement of migratory neural crest cell		IMP	MGI:2150759 	J:71240 	
+MGI:107557	Sema3c	sema domain, immunoglobulin domain (Ig), short basic domain, secreted, (semaphorin) 3C	5		positive regulation of cardiac neural crest cell migration involved in outflow tract morphogenesis	is a part of semaphorin-plexin signaling pathway		IDA		J:225355 	
+MGI:1860118	Sema3d	sema domain, immunoglobulin domain (Ig), short basic domain, secreted, (semaphorin) 3D	5		neural crest cell migration			IBA	PTN000867340 	J:265628 	
+MGI:1340034	Sema3e	sema domain, immunoglobulin domain (Ig), short basic domain, secreted, (semaphorin) 3E	5		neural crest cell migration			IBA	PTN000867340 	J:265628 	
+MGI:1096347	Sema3f	sema domain, immunoglobulin domain (Ig), short basic domain, secreted, (semaphorin) 3F	9		neural crest cell migration			IBA	PTN000867340 	J:265628 	
+MGI:1096347	Sema3f	sema domain, immunoglobulin domain (Ig), short basic domain, secreted, (semaphorin) 3F	9		neural crest cell migration	happens in trunk mesenchyme derived from neural crest,results in the movement of migratory trunk neural crest cell		IMP	MGI:2670663 	J:104892 	
+MGI:1096347	Sema3f	sema domain, immunoglobulin domain (Ig), short basic domain, secreted, (semaphorin) 3F	9		neural crest cell migration involved in autonomic nervous system development	results in the movement of migratory trunk neural crest cell		IMP		J:149474 	
+MGI:1096347	Sema3f	sema domain, immunoglobulin domain (Ig), short basic domain, secreted, (semaphorin) 3F	9		ventral trunk neural crest cell migration			IMP		J:149474 	
+MGI:3041242	Sema3g	sema domain, immunoglobulin domain (Ig), short basic domain, secreted, (semaphorin) 3G	14		neural crest cell migration			IBA	PTN000867340 	J:265628 	
+MGI:107560	Sema4a	sema domain, immunoglobulin domain (Ig), transmembrane domain (TM) and short cytoplasmic domain, (semaphorin) 4A	3		neural crest cell migration			IBA	PTN000867340 	J:265628 	
+MGI:107559	Sema4b	sema domain, immunoglobulin domain (Ig), transmembrane domain (TM) and short cytoplasmic domain, (semaphorin) 4B	7		neural crest cell migration			IBA	PTN000867340 	J:265628 	
+MGI:109252	Sema4c	sema domain, immunoglobulin domain (Ig), transmembrane domain (TM) and short cytoplasmic domain, (semaphorin) 4C	1		neural crest cell migration			IBA	PTN000867340 	J:265628 	
+MGI:109244	Sema4d	sema domain, immunoglobulin domain (Ig), transmembrane domain (TM) and short cytoplasmic domain, (semaphorin) 4D	13		neural crest cell migration			IBA	PTN000867340 	J:265628 	
+MGI:1340055	Sema4f	sema domain, immunoglobulin domain (Ig), TM domain, and short cytoplasmic domain	6		neural crest cell migration			IBA	PTN000867340 	J:265628 	
+MGI:1347047	Sema4g	sema domain, immunoglobulin domain (Ig), transmembrane domain (TM) and short cytoplasmic domain, (semaphorin) 4G	19		neural crest cell migration			IBA	PTN000867340 	J:265628 	
+MGI:107556	Sema5a	sema domain, seven thrombospondin repeats (type 1 and type 1-like), transmembrane domain (TM) and short cytoplasmic domain, (semaphorin) 5A	15		neural crest cell migration			IBA	PTN000867340 	J:265628 	
+MGI:107555	Sema5b	sema domain, seven thrombospondin repeats (type 1 and type 1-like), transmembrane domain (TM) and short cytoplasmic domain, (semaphorin) 5B	16		neural crest cell migration			IBA	PTN000867340 	J:265628 	
+MGI:1203727	Sema6a	sema domain, transmembrane domain (TM), and cytoplasmic domain, (semaphorin) 6A	18		neural crest cell migration			IBA	PTN000867340 	J:265628 	
+MGI:1202889	Sema6b	sema domain, transmembrane domain (TM), and cytoplasmic domain, (semaphorin) 6B	17		neural crest cell migration			IBA	PTN000867340 	J:265628 	
+MGI:1338032	Sema6c	sema domain, transmembrane domain (TM), and cytoplasmic domain, (semaphorin) 6C	3		neural crest cell migration			IBA	PTN000867340 	J:265628 	
+MGI:2387661	Sema6d	sema domain, transmembrane domain (TM), and cytoplasmic domain, (semaphorin) 6D	2		neural crest cell migration			IBA	PTN000867340 	J:265628 	
+MGI:1306826	Sema7a	sema domain, immunoglobulin domain (Ig), and GPI membrane anchor, (semaphorin) 7A	9		neural crest cell migration			IBA	PTN000867340 	J:265628 	
+MGI:2446244	Setd1a	SET domain containing 1A	7		regulation of hematopoietic stem cell differentiation			ISO	O15047 	J:164563 	
+MGI:1918177	Setd2	SET domain containing 2	9		stem cell development			IMP	MGI:4437211 	J:157570 	
+MGI:1918177	Setd2	SET domain containing 2	9		stem cell differentiation			IMP		J:243534 	
+MGI:1913333	Setd6	SET domain containing 6	8		stem cell differentiation			IDA		J:224806 	
+MGI:892014	Sfrp1	secreted frizzled-related protein 1	8		hematopoietic stem cell differentiation			ISO	Q8N474 	J:164563 	
+MGI:892014	Sfrp1	secreted frizzled-related protein 1	8		neural crest cell fate commitment			IMP	MGI:3045799 	J:157931 	
+MGI:2655364	Shc4	SHC (Src homology 2 domain containing) family, member 4	2		stem cell differentiation			IMP		J:194646 	
+MGI:98297	Shh	sonic hedgehog	5		neural crest cell migration	happens in embryo,results in the movement of migratory neural crest cell		IMP	MGI:1857796 	J:99648 	
+MGI:98297	Shh	sonic hedgehog	5		stem cell development			IMP		J:84335 	
+MGI:102780	Six1	sine oculis-related homeobox 1	12		neural crest cell differentiation	has the participant Ednra		IGI	MGI:105923 	J:241567 	
+MGI:2138987	Slc4a11	solute carrier family 4, sodium bicarbonate transporter-like, member 11	2		regulation of mesenchymal stem cell differentiation			IMP		J:304590 	
+MGI:894293	Smad4	SMAD family member 4	18		neural crest cell differentiation			IMP		J:153961 	
+MGI:108075	Smo	smoothened, frizzled class receptor	6		neural crest cell migration			IGI	MGI:101791 	J:110602 	
+MGI:108048	Smyd5	SET and MYND domain containing 5	6		regulation of stem cell differentiation			IMP		J:306885 J:306882 	
+MGI:108048	Smyd5	SET and MYND domain containing 5	6		regulation of stem cell differentiation			ISO	Q6GMV2 	J:164563 	
+MGI:1096393	Snai2	snail family zinc finger 2	16		neural crest cell development			ISO	O43623 	J:164563 	
+MGI:98364	Sox2	SRY (sex determining region Y)-box 2	3		stem cell differentiation	results in the differentiation of embryonic stem cell		IDA		J:156932 	
+MGI:98367	Sox5	SRY (sex determining region Y)-box 5	6		positive regulation of mesenchymal stem cell differentiation			ISO	P35711 	J:164563 	
+MGI:98368	Sox6	SRY (sex determining region Y)-box 6	7		positive regulation of mesenchymal stem cell differentiation			ISO	P35712 	J:164563 	
+MGI:98370	Sox8	SRY (sex determining region Y)-box 8	17		neural crest cell development			IBA	PTN002910099 	J:265628 	
+MGI:98370	Sox8	SRY (sex determining region Y)-box 8	17		neural crest cell migration			IMP		J:95755 	
+MGI:98371	Sox9	SRY (sex determining region Y)-box 9	11		neural crest cell development	happens in trunk mesenchyme derived from neural crest,results in the development of migratory trunk neural crest cell		IMP	MGI:3041881 	J:105025 	
+MGI:98371	Sox9	SRY (sex determining region Y)-box 9	11		positive regulation of mesenchymal stem cell differentiation			ISO	P48436 	J:164563 	
+MGI:98358	Sox10	SRY (sex determining region Y)-box 10	15		neural crest cell migration			IBA	PTN002910110 	J:265628 	
+MGI:98358	Sox10	SRY (sex determining region Y)-box 10	15		neural crest cell migration			IMP		J:95755 	
+MGI:98359	Sox11	SRY (sex determining region Y)-box 11	12		neural crest cell development			IMP		J:175338 	
+MGI:107543	Sox17	SRY (sex determining region Y)-box 17	1		stem cell differentiation	results in the differentiation of embryonic stem cell		IMP	MGI:3717118 	J:156932 	
+MGI:107543	Sox17	SRY (sex determining region Y)-box 17	1		stem cell fate specification			IDA		J:160232 	
+MGI:103559	Sox18	SRY (sex determining region Y)-box 18	2		stem cell fate specification			IDA		J:160232 	
+MGI:2654070	Sox21	SRY (sex determining region Y)-box 21	14		stem cell differentiation			ISO	Q9Y651 	J:164563 	
+MGI:2153568	Sp7	Sp7 transcription factor 7	15		hematopoietic stem cell differentiation			ISO	Q8TDD2 	J:164563 	
+MGI:2153568	Sp7	Sp7 transcription factor 7	15		positive regulation of stem cell differentiation			ISO	Q8TDD2 	J:164563 	
+MGI:106658	Srf	serum response factor	17		hematopoietic stem cell differentiation	happens in bone marrow,results in the differentiation of hematopoietic multipotent progenitor cell|happens in bone marrow,results in the differentiation of hematopoietic stem cell		IMP	MGI:2176073 MGI:3046779 	J:166639 	
+MGI:106658	Srf	serum response factor	17		positive regulation of transcription from RNA polymerase II promoter involved in myocardial precursor cell differentiation			IMP		J:173014 	
+MGI:106658	Srf	serum response factor	17		positive regulation of transcription from RNA polymerase II promoter involved in myocardial precursor cell differentiation			ISO	P11831 	J:164563 	
+MGI:103038	Stat3	signal transducer and activator of transcription 3	11		negative regulation of stem cell differentiation			IMP		J:223575 	
+MGI:98472	T	brachyury, T-box transcription factor T	17		positive regulation of transcription from RNA polymerase II promoter involved in myocardial precursor cell differentiation			IMP		J:180827 	
+MGI:98472	T	brachyury, T-box transcription factor T	17		positive regulation of transcription from RNA polymerase II promoter involved in myocardial precursor cell differentiation			ISO	O15178 	J:164563 	
+MGI:1861606	Tacstd2	tumor-associated calcium signal transducer 2	6		positive regulation of stem cell differentiation			IBA	PTN000366719 	J:265628 	
+MGI:1861606	Tacstd2	tumor-associated calcium signal transducer 2	6		positive regulation of stem cell differentiation			IDA		J:188255 	
+MGI:98480	Tal1	T cell acute lymphocytic leukemia 1	4		hematopoietic stem cell differentiation	results in the differentiation of short term hematopoietic stem cell		IMP	MGI:2176073 MGI:2450743 	J:90290 	
+MGI:98480	Tal1	T cell acute lymphocytic leukemia 1	4		hematopoietic stem cell differentiation	happens in liver,results in the differentiation of hematopoietic stem cell		IMP	MGI:2450311 MGI:2661471 	J:98971 	
+MGI:98493	Tbx1	T-box 1	16		neural crest cell migration	happens in rhombomere 4 roof plate,results in the movement of migratory cranial neural crest cell|happens in 2nd branchial arch,results in the movement of migratory cranial neural crest cell		IMP	MGI:2179190 	J:96463 	
+MGI:98493	Tbx1	T-box 1	16		neural crest cell migration	happens in branchial arch,results in the movement of migratory cranial neural crest cell		IMP	MGI:2179191 	J:163487 	
+MGI:98494	Tbx2	T-box 2	11		regulation of transcription from RNA polymerase II promoter involved in myocardial precursor cell differentiation	uses UniProtKB:P05125|uses UniProtKB:Q01231		IDA		J:93610 	
+MGI:102541	Tbx5	T-box 5	5		positive regulation of cardioblast differentiation			ISO	Q99593 	J:164563 	
+MGI:1202876	Tcf7l1	transcription factor 7 like 1 (T cell specific, HMG box)	6		stem cell differentiation			IMP	MGI:3044616 	J:114674 	
+MGI:104664	Tcf15	transcription factor 15	2		negative regulation of hematopoietic stem cell differentiation			IDA		J:297822 	
+MGI:104664	Tcf15	transcription factor 15	2		positive regulation of stem cell differentiation			IMP		J:302456 	
+MGI:892003	Tcof1	treacle ribosome biogenesis factor 1	18		neural crest cell development			ISO	Q13428 	J:164563 	
+MGI:104904	Tead2	TEA domain family member 2	7		regulation of stem cell differentiation			IMP		J:182976 	
+MGI:109558	Terc	telomerase RNA component	3		hematopoietic stem cell differentiation	happens in bone marrow,results in the differentiation of hematopoietic stem cell		IMP	MGI:1857930 	J:122781 	
+MGI:104671	Tfap2a	transcription factor AP-2, alpha	13		neural crest cell development	happens in embryo,results in the development of migratory cranial neural crest cell		IMP	MGI:2176682 	J:33031 	
+MGI:98726	Tgfb2	transforming growth factor, beta 2	1		cardioblast differentiation			ISO	P61812 	J:164563 	
+MGI:98726	Tgfb2	transforming growth factor, beta 2	1		positive regulation of cardioblast differentiation			ISO	P61812 	J:164563 	
+MGI:2137352	Trim6	tripartite motif-containing 6	7		negative regulation of stem cell differentiation	uses UniProtKB:Q80Z64,happens in embryonic stem cell,uses UniProtKB:P09056		IMP		J:197300 	
+MGI:98834	Trp53	transformation related protein 53	11		hematopoietic stem cell differentiation			ISO	P04637 	J:164563 	
+MGI:1330810	Trp63	transformation related protein 63	16		squamous basal epithelial stem cell differentiation involved in prostate gland acinus development			IMP	MGI:1934580 	J:93615 	
+MGI:98872	Twist1	twist basic helix-loop-helix transcription factor 1	12		cardiac neural crest cell development involved in outflow tract morphogenesis			IMP	MGI:1857265 	J:138404 	
+MGI:98872	Twist1	twist basic helix-loop-helix transcription factor 1	12		cardiac neural crest cell migration involved in outflow tract morphogenesis			IMP	MGI:1857265 	J:138404 	
+MGI:1914740	Ufl1	UFM1 specific ligase 1	4		hematopoietic stem cell differentiation			IMP		J:238253 	
+MGI:1921298	Vsir	V-set immunoregulatory receptor	10		positive regulation of stem cell differentiation	regulates the differentiation of embryonic stem cell		IGI	MGI:2676809 	J:192401 	
+MGI:1921298	Vsir	V-set immunoregulatory receptor	10		stem cell differentiation	results in the differentiation of stem cell		IMP		J:193667 	
+MGI:98955	Wnt3	wingless-type MMTV integration site family, member 3	11		canonical Wnt signaling pathway involved in mesenchymal stem cell differentiation			ISO	P56703 	J:164563 	
+MGI:98956	Wnt3a	wingless-type MMTV integration site family, member 3A	11		negative regulation of heart induction by canonical Wnt signaling pathway			ISO	P56704 	J:164563 	
+MGI:98961	Wnt7a	wingless-type MMTV integration site family, member 7A	6		stem cell development			ISO	O00755 	J:164563 	
+MGI:98962	Wnt7b	wingless-type MMTV integration site family, member 7B	15		stem cell development			IDA		J:84335 	
+MGI:108071	Wnt10a	wingless-type MMTV integration site family, member 10A	1		neural crest cell differentiation			IDA		J:121904 	
+MGI:104517	Xrcc5	X-ray repair complementing defective repair in Chinese hamster cells 5	1		hematopoietic stem cell differentiation	happens in bone marrow,results in the differentiation of hematopoietic stem cell		IMP	MGI:2152542 	J:122781 	
+MGI:103262	Yap1	yes-associated protein 1	9		negative regulation of stem cell differentiation			IDA		J:160813 	
+MGI:2444233	Ythdf2	YTH N6-methyladenosine RNA binding protein 2	4		negative regulation of stem cell differentiation			ISO	Q9Y5A9 	J:164563 	
+MGI:2444233	Ythdf2	YTH N6-methyladenosine RNA binding protein 2	4		regulation of hematopoietic stem cell differentiation			IMP		J:276493 J:276511 	
+MGI:1344407	Zeb2	zinc finger E-box binding homeobox 2	2		neural crest cell migration	results in the movement of migratory cranial neural crest cell,results in the movement of migratory cranial neural crest cell		IMP	MGI:2387501 	J:82084 	
+MGI:107945	Zfp36l2	zinc finger protein 36, C3H type-like 2	17		negative regulation of stem cell differentiation			IMP		J:199080 	
+MGI:3029290	Zfp281	zinc finger protein 281	1		stem cell differentiation			IMP		J:190108 J:190201 	
+MGI:2685243	Zscan4c	zinc finger and SCAN domain containing 4C	7		stem cell differentiation			TAS		J:158887 	
+MGI:3040700	Zscan10	zinc finger and SCAN domain containing 10	17		stem cell differentiation			TAS		J:118084 J:126045 	
+
